@@ -8,6 +8,7 @@ documents:
 properties:
   regex:
     type: array
+    default: [""]
     items:
       title: Regex
       type: string
