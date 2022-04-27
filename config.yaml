@@ -7,7 +7,9 @@ documents:
   - selected
 properties:
   regex:
-    title: Regex
-    type: string
-    format: regex
+    type: array
+    items:
+      title: Regex
+      type: string
+      format: regex
 required: [regex]
