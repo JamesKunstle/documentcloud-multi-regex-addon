@@ -1,15 +1,11 @@
-"""
-This is an add-on to search a document for a regex and output all of the matches
-"""
-
 import csv
 import re
 
 from documentcloud.addon import AddOn
 
-
-class Regex(AddOn):
+class Multi_Regex(AddOn):
     def main(self):
+
         if not self.documents:
             self.set_message("Please select at least one document")
             return
@@ -26,7 +22,6 @@ class Regex(AddOn):
 
             # for each pattern supplied
             for regex_pattern in self.data["regex"]:
-                print("Pattern: " + regex_pattern)
                 pattern = re.compile(regex_pattern)
 
                 for document in self.client.documents.list(id__in=self.documents):
@@ -45,4 +40,4 @@ class Regex(AddOn):
 
 
 if __name__ == "__main__":
-    Regex().main()
+    Multi_Regex().main()
