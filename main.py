@@ -30,12 +30,6 @@ class Multi_Regex(AddOn):
                         for m in pattern.findall(document.full_text)
                     )
                     
-            print("CSV Document Contents:")
-            # go to the beginning of the file
-            file_.seek(0)
-            # print the file contents
-            print(file_.read())
-
             self.upload_file(file_)
 
 
