@@ -3,6 +3,7 @@ import re
 
 from documentcloud.addon import AddOn
 
+
 class Multi_Regex(AddOn):
     def main(self):
 
@@ -11,10 +12,10 @@ class Multi_Regex(AddOn):
             return
 
         # assumes that the regex pattern list is at least of length 1
-        if(len(self.data["regex"]) < 1):
+        if len(self.data["regex"]) < 1:
             self.set_message("Please provide at least one regular expression.")
             return
-        
+
         with open("matches.csv", "w+") as file_:
 
             writer = csv.writer(file_)
@@ -29,7 +30,7 @@ class Multi_Regex(AddOn):
                         [regex_pattern, m, document.canonical_url]
                         for m in pattern.findall(document.full_text)
                     )
-                    
+
             self.upload_file(file_)
 
 
