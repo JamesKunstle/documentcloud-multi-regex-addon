@@ -1,8 +1,11 @@
-# DocumentCloud Regex Add-On
+# DocumentCloud Multiple Regex Add-On
 
-This DocumentCloud Add-On allows you to search through multiple files for a
-set of one or more regular expressions, returning a CSV file of matches across
-all of the input files.
+With this DocumentCloud Add-On one can use multiple Regular Expressions (Regex) as parameters
+and find all examples of those patterns in the specified documents. The Regex's are passed as 
+parameters to the main.py script.
+
+The output of this add-on is a CSV of all of the incidences of patterns matching text in the 
+documents specified.
 
 ## Files
 
