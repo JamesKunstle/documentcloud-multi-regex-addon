@@ -2,6 +2,7 @@ title: Multiple Regex Extractor
 description: >-
   This will return a CSV file of all strings the given regex matches in
   the selected files for all of the patterns passed as parameters.
+instructions: ''
 type: object
 documents:
   - selected
